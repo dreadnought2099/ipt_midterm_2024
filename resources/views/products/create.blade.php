@@ -23,14 +23,13 @@
         </div>
 
         <div class="mb-3">
-            <label for="category_id" class="form-label">Category</label>
-            <select name="category_id" id="category" class="form-control" required>
-                <option value="">Select Category</option>
-                @foreach($categories as $category)
-                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                @endforeach
-            </select>
-        </div>
+        <label for="category" class="form-label">Category</label>
+        <select name="category_id" id="category" class="form-control" required>
+            @foreach($categories as $category)
+            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+    </div>
 
         <button type="submit" class="btn btn-success">Save Product</button>
     </form>
